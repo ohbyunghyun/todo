@@ -26,22 +26,27 @@ header {
 
 .top {
   background-color: aliceblue;
-  width: 796px;
+  width: 731px;
   height: 70px;
   box-shadow: 2px 2px 0 black;
   font-size: 30px;
-  margin-right: 10px;
   color: gray;
+  margin-right: 10px;
   border: none;
+  padding: 0 0 0 70px;
 }
 
 .list {
   border: 1px solid gray;
-  width: 800px;
+  width: 725px;
   height: 60px;
   margin: 3px auto;
   background-color: aliceblue;
   box-shadow: 2px 2px 0 black;
+  font-size: 30px;
+  color: gray;
+  padding: 0 0 0 75px"
+  /* display: none; */
 }
 
 .bottom {
@@ -52,7 +57,7 @@ header {
   height: 40px;
   margin: 3px auto;
   box-shadow: 2px 2px 0 black;
-  
+  /* display: none; */
 }
 
 footer { 
@@ -111,7 +116,8 @@ li > a:hover {
 .btn2 {
   width: 70px;
   height: 60px;
-  float: left;
+  border: 1px solid black;
+  position: absolute;
 }
 
 .btn3 {
