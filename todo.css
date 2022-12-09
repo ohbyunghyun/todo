@@ -1,0 +1,131 @@
+html {
+  background-color: slateblue;
+  margin: 0px;
+  height: 1000px;
+}
+
+body {
+  height: auto;
+}
+
+header {
+  font-size: 100px;
+  color: azure;
+  font-family: Impact;
+  opacity: 0.9;
+  margin: 80px auto;
+  width: 500px;
+  text-align: center;
+}
+
+.topdiv {
+  
+  width: 800px;
+  margin: 0 auto;
+}
+
+.top {
+  background-color: aliceblue;
+  width: 796px;
+  height: 70px;
+  box-shadow: 2px 2px 0 black;
+  font-size: 30px;
+  margin-right: 10px;
+  color: gray;
+  border: none;
+}
+
+.list {
+  border: 1px solid gray;
+  width: 800px;
+  height: 60px;
+  margin: 3px auto;
+  background-color: aliceblue;
+  box-shadow: 2px 2px 0 black;
+}
+
+.bottom {
+
+  background-color: aliceblue;
+  border: 1px solid black;
+  width: 800px;
+  height: 40px;
+  margin: 3px auto;
+  box-shadow: 2px 2px 0 black;
+  
+}
+
+footer { 
+  text-align: center;
+  margin: 400px auto;
+  height: 120px;
+  color: aliceblue;
+}
+
+.left {
+  width: 100px;
+  height: 25px;
+  margin-top: 7px;
+  text-align: center;
+  color: dimgray;
+  float: left;
+}
+
+ul {
+  height: 25px;
+  width: 300px;
+  float: left;
+  margin-left: 130px;
+}
+
+li {
+  float: left;
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+li > a {
+  text-decoration: none;
+  color: dimgray;
+  font-weight: bold;
+}
+
+li > a:hover {
+  color: cornflowerblue;
+}
+
+.right {
+  float: right;
+  width: 70px;
+  height: 25px;
+  margin-top: 7px;
+  color: dimgray;
+}
+
+.btn1 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+
+.btn2 {
+  width: 70px;
+  height: 60px;
+  float: left;
+}
+
+.btn3 {
+  width: 70px;
+  height: 60px;
+  float: right;
+}
+
+.check1 {
+  margin-top: 28px;
+  margin-left: 28px;
+}
+
+.check2 {
+  margin-top: 25px;
+  margin-left: 28px;
+}
