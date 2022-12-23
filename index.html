@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <style>
+    #inputbox {
+      border: 1px solid black;
+      width: 600px;
+      height: 40px;
+      margin: 10px auto;
+      box-shadow: 3px 3px 0 gray;
+    }
+    
+    #check {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      margin-top: 7px;
+      margin-left: 10px;
+    }
+
+    #input {
+      border: 1px solid black;
+      width: 600px;
+      height: 40px;
+      color: black;
+      font-size: 30px;
+      box-shadow: 3px 3px 0 black;
+      padding-left: 60px;
+    }
+
+
+    #todobox {
+      width: 600px;
+      height: auto;
+      margin-top: 10px;
+      margin: 10px auto;
+      background-color: white;
+    }
+
+    .todolist {
+      margin-top: 1px;
+      border: 1px solid black;
+      width: 600px;
+      height: 40px;
+      font-size: 30px;
+      box-shadow: 3px 3px 0 black;
+    }
+
+    .todolists {
+      position: absolute;
+      width: 500px;
+      height: 40px;
+      margin-left: 60px;
+      font-size: 30px;
+    }
+
+    #delete {
+      width: 30px;
+      height: 30px;
+      float: right;
+      text-align: center;
+      color: red;
+      cursor: pointer;
+    }
+
+    header {
+      margin: 10px auto;
+      font-size: 50px;
+      width: 250px;
+      color: white;
+    }
+
+    html {
+      background-color: slateblue;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="text-shadow: 3px 3px 0 black;">Todo List</header>
+  <div id="inputbox">
+    <input type="checkbox" id="check" class="checkall" value="selectall" placeholder="해야 할 일을 입력해주세요.">
+    <input type="text" id="input">
+  </div>
+  <div id="todobox"></div>
+  <button id="checkdelete">체크딜리트</button>
+</body>
+<script>
+  const checkdelete = document.querySelector("#checkdelete");
+  var todobox = document.querySelector("#todobox");
+  var input = document.querySelector("#input");
+  var i = 0;
+
+  input.addEventListener('keypress', (event) => {
+    const ENTER = 13
+    if (event.keyCode == 13) {
+      createtodolist();
+    }
+  });
+
+  function createtodolist() {
+
+    var todo = document.createElement('div');
+    var todos = document.createElement('div');
+    var deletebtn = document.createElement('div');
+    var check = document.createElement('input');
+
+    todo.setAttribute('class', "todolist");
+    todos.setAttribute('class', "todolists");
+    deletebtn.setAttribute('id', "delete");
+    check.setAttribute('type', "checkbox");
+    check.setAttribute('id', "check");
+    check.setAttribute('class', "check");
+
+    deletebtn.innerHTML = "X";
+    todos.innerHTML = input.value;
+    todo.append(check);
+    input.value = "";
+    todobox.append(todo);
+    todo.append(todos);
+    todo.append(deletebtn);
+
+    deletebtn.addEventListener('click', (e) => {
+      deletebtn.parentNode.style.display = "none";
+    });
+
+  };
+
+const bigcheck = document.querySelector('.checkall');
+
+bigcheck.addEventListener('click', (e) => {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = bigcheck.checked;
+  })
+});
+
+// checkdelete.addEventListener('click', (e) => {
+//   const checkma = document.querySelectorAll(".check").forEach(() => {
+//     checkma.style.display = "none";
+//   })
+//   const checkman = document.querySelectorAll(".check").checked;
+// });
+
+// var checkcheck = document.querySelector("#check").checked;
+// console.log(checkcheck);
+
+
+// const checkk = document.querySelector('.checkAll');
+// const hi = checkk.getAttribute("checked");
+
+// checkdelete.addEventListener('click', (e) => {
+//   var checkcheck = document.querySelectorAll(".check").checked;
+
+//   console.log(checkcheck);
+// });
+
+</script>
+
+</html>
